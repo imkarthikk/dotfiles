@@ -1,6 +1,7 @@
 [
   {
     "bindings": {
+      "cmd-t": "file_finder::Toggle",
       "cmd-shift-d": "editor::DuplicateLineDown"
     }
   }

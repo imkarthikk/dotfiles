@@ -20,12 +20,13 @@
   },
   "ui_font_size": 14,
   "buffer_font_size": 13,
+  "ui_font_family": "System Font",
   "format_on_save": "on",
   // UI Customizations
   "theme": {
     "mode": "system",
-    "light": "macOS Classic Light",
-    "dark": "macOS Classic Dark"
+    "light": "Xcode Sunset",
+    "dark": "Xcode High Contrast Dark"
   },
   "scrollbar": {
     "show": "system"
