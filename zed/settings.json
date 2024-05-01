@@ -16,12 +16,13 @@
   },
   "gutter": {
     "line_numbers": true,
-    "code_actions": false
+    "code_actions": true
   },
   "ui_font_size": 14,
   "buffer_font_size": 13,
   "ui_font_family": "System Font",
   "format_on_save": "on",
+  "soft_wrap": "preferred_line_length",
   // UI Customizations
   "theme": {
     "mode": "system",
@@ -40,16 +41,15 @@
     "auto_indent": true,
     "line_numbers": true,
     "highlight_active_line": true,
-    "show_whitespace": true
+    "show_whitespace": true,
+    "soft_wrap": "preferred_line_length"
   },
   "files": {
     "trim_trailing_whitespace": true,
     "insert_final_newline": true
   },
   "file_types": {
-    "CSS": [
-      "scss"
-    ]
+    "CSS": ["scss"]
   },
   // Language Settings
   "languages": {
@@ -59,7 +59,12 @@
       },
       "TSX": {
         "code_actions_on_format": {
-          "source.organizeImports": true,
+          "source.organizeImports": true
+        }
+      },
+      "Astro": {
+        "code_actions_on_format": {
+          "source.organizeImports": true
         }
       },
       "JavaScript": {
@@ -76,18 +81,14 @@
   "formatter": {
     "external": {
       "command": "node_modules/.bin/prettier",
-      "arguments": [
-        "--stdin-filepath",
-        "{buffer_path}"
-      ]
+      "arguments": ["--stdin-filepath", "{buffer_path}"]
     }
   },
   // Git Customizations
   "git": {
-    "git_gutter":"tracked_files",
+    "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": false,
-      "delay_ms": 500
+      "enabled": true
     }
   },
   // Telemetry Customizations
