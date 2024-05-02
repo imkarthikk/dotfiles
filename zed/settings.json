@@ -78,14 +78,18 @@
     "source.fixAll": true,
     "source.organizeImports.biome": true
   },
-  "formatter": {
-    "external": {
-      "command": "node_modules/.bin/prettier",
-      "arguments": ["--stdin-filepath", "{buffer_path}"]
-    }
-  },
+  "formatter": "auto",
+  // "formatter": {
+  //   "external": {
+  //     "command": "node_modules/.bin/prettier",
+  //     "arguments": ["--stdin-filepath", "{buffer_path}"]
+  //   }
+  // },
   // Git Customizations
   "git": {
+    "inline_blame": {
+      "min_column": 80
+    },
     "git_gutter": "tracked_files",
     "inline_blame": {
       "enabled": true
@@ -93,7 +97,7 @@
   },
   // Telemetry Customizations
   "telemetry": {
-    "diagnostics": false,
-    "metrics": false
+    "diagnostics": true,
+    "metrics": true
   }
 }
