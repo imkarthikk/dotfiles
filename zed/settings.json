@@ -27,7 +27,7 @@
   "theme": {
     "mode": "system",
     "light": "Xcode Sunset",
-    "dark": "Xcode High Contrast Dark"
+    "dark": "macOS Classic Dark"
   },
   "scrollbar": {
     "show": "system"
@@ -97,7 +97,7 @@
   },
   // Telemetry Customizations
   "telemetry": {
-    "diagnostics": true,
-    "metrics": true
+    "diagnostics": false,
+    "metrics": false
   }
 }
