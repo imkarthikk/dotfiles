@@ -7,13 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "nightly": {
-    "enabled": true,
-    "channel": "stable"
-  },
-  "features": {
-    "copilot": false
-  },
   "gutter": {
     "line_numbers": true,
     "code_actions": true
@@ -53,6 +46,9 @@
   },
   // Language Settings
   "languages": {
+    "Astro": {
+      "show_inline_completions": true
+    },
     "TypeScript": {
       "code_actions_on_format": {
         "source.organizeImports": true
@@ -79,21 +75,13 @@
     "source.organizeImports.biome": true
   },
   "formatter": "auto",
-  // "formatter": {
-  //   "external": {
-  //     "command": "node_modules/.bin/prettier",
-  //     "arguments": ["--stdin-filepath", "{buffer_path}"]
-  //   }
-  // },
   // Git Customizations
   "git": {
     "inline_blame": {
+      "enabled": true,
       "min_column": 80
     },
-    "git_gutter": "tracked_files",
-    "inline_blame": {
-      "enabled": true
-    }
+    "git_gutter": "tracked_files"
   },
   // Telemetry Customizations
   "telemetry": {
