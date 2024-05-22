@@ -47,7 +47,11 @@
   // Language Settings
   "languages": {
     "Astro": {
-      "show_inline_completions": true
+      "show_inline_completions": true,
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      },
+      "language_servers": ["tailwincss-language-server"]
     },
     "TypeScript": {
       "code_actions_on_format": {
