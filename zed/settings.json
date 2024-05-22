@@ -11,6 +11,10 @@
     "line_numbers": true,
     "code_actions": true
   },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
   "ui_font_size": 14,
   "buffer_font_size": 13,
   "ui_font_family": "System Font",
@@ -49,7 +53,8 @@
     "Astro": {
       "show_inline_completions": true,
       "code_actions_on_format": {
-        "source.organizeImports": true
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
       },
       "language_servers": ["tailwincss-language-server"]
     },
@@ -83,9 +88,15 @@
   "git": {
     "inline_blame": {
       "enabled": true,
-      "min_column": 80
+      "min_column": 80,
+      "delay_ms": 500
     },
     "git_gutter": "tracked_files"
+  },
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    }
   },
   // Telemetry Customizations
   "telemetry": {
