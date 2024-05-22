@@ -80,8 +80,7 @@
     }
   },
   "code_actions_on_format": {
-    "source.fixAll": true,
-    "source.organizeImports.biome": true
+    "source.fixAll": true
   },
   "formatter": "auto",
   // Git Customizations
@@ -92,11 +91,6 @@
       "delay_ms": 500
     },
     "git_gutter": "tracked_files"
-  },
-  "terminal": {
-    "env": {
-      "EDITOR": "zed --wait"
-    }
   },
   // Telemetry Customizations
   "telemetry": {
