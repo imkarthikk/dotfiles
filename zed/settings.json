@@ -1,60 +1,52 @@
 // Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
-  "gutter": {
-    "line_numbers": true,
-    "code_actions": true
-  },
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
-  },
   "ui_font_size": 14,
   "buffer_font_size": 13,
   "ui_font_family": "System Font",
   "format_on_save": "on",
   "soft_wrap": "preferred_line_length",
-  // UI Customizations
+  "tab_size": 2,
+  "line_indicator_format": "short",
+  "current_line_highlight": "gutter",
+  "formatter": "auto",
+  "code_actions_on_format": {
+    "source.fixAll": true
+  },
+  "git": {
+    "git_gutter": "tracked_files"
+  },
+  "centered_layout": {
+    "left_padding": 0.4,
+    "right_padding": 0.4
+  },
   "theme": {
     "mode": "system",
-    "light": "Xcode Sunset",
+    "light": "macOS Classic Light",
     "dark": "macOS Classic Dark"
   },
   "scrollbar": {
     "show": "system"
   },
-  "project_panel": {
-    "dock": "left"
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
   },
-  // Editor Customizations
-  "editor": {
-    "tab_size": 2,
-    "auto_indent": true,
-    "line_numbers": true,
-    "highlight_active_line": true,
-    "show_whitespace": true,
-    "soft_wrap": "preferred_line_length"
-  },
-  "files": {
-    "trim_trailing_whitespace": true,
-    "insert_final_newline": true
+  "tabs": {
+    "git_status": true
   },
   "file_types": {
-    "CSS": ["scss"]
+    "CSS": ["scss"],
+    "Astro": ["astro"]
   },
-  // Language Settings
+  "project_panel": {
+    "dock": "right",
+    "file_icons": true
+  },
   "languages": {
     "Astro": {
       "show_inline_completions": true,
       "code_actions_on_format": {
-        "source.organizeImports": true,
-        "source.fixAll.eslint": true
+        "source.organizeImports": true
       },
       "language_servers": ["tailwincss-language-server"]
     },
@@ -67,11 +59,6 @@
           "source.organizeImports": true
         }
       },
-      "Astro": {
-        "code_actions_on_format": {
-          "source.organizeImports": true
-        }
-      },
       "JavaScript": {
         "code_actions_on_format": {
           "source.fixAll.eslint": true
@@ -79,20 +66,17 @@
       }
     }
   },
-  "code_actions_on_format": {
-    "source.fixAll": true
+  "lsp": {
+    "tailwindcss-language-server": {
+      "includeLanguages": {
+        "astro": "html"
+      },
+      "classAttributes": ["class", "className", "class:list"],
+      "experimental": {
+        "classRegex": ["[class|className]\\s\\:\\=\\s\"([^\"]*)"]
+      }
+    }
   },
-  "formatter": "auto",
-  // Git Customizations
-  "git": {
-    "inline_blame": {
-      "enabled": true,
-      "min_column": 80,
-      "delay_ms": 500
-    },
-    "git_gutter": "tracked_files"
-  },
-  // Telemetry Customizations
   "telemetry": {
     "diagnostics": false,
     "metrics": false
