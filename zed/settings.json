@@ -4,25 +4,29 @@
   "buffer_font_size": 13,
   "ui_font_family": "System Font",
   "format_on_save": "on",
-  "soft_wrap": "preferred_line_length",
+  "soft_wrap": "editor_width",
   "tab_size": 2,
   "line_indicator_format": "short",
   "current_line_highlight": "gutter",
   "formatter": "auto",
-  "code_actions_on_format": {
-    "source.fixAll": true
-  },
+  "wrap_guides": [80, 100],
+  "show_wrap_guides": true,
+  // "code_actions_on_format": {
+  //   "source.fixAll": true
+  // },
   "git": {
     "git_gutter": "tracked_files"
-  },
-  "centered_layout": {
-    "left_padding": 0.4,
-    "right_padding": 0.4
   },
   "theme": {
     "mode": "system",
     "light": "macOS Classic Light",
     "dark": "macOS Classic Dark"
+  },
+  "buffer_font_features": {
+    "calt": true, // contextual alternatives e.g. !=
+    "liga": true, // ligatures
+    "onum": true, // old style numerals
+    "ss02": true // Stylistic Set 02 (pseudo-kerning in Pixel Code)
   },
   "scrollbar": {
     "show": "system"
@@ -35,47 +39,28 @@
     "git_status": true
   },
   "file_types": {
-    "CSS": ["scss"],
-    "Astro": ["astro"]
-  },
-  "project_panel": {
-    "dock": "right",
-    "file_icons": true
+    "MDX": ["md"]
   },
   "languages": {
     "Astro": {
-      "show_inline_completions": true,
       "code_actions_on_format": {
         "source.organizeImports": true
       },
-      "language_servers": ["tailwincss-language-server"]
-    },
-    "TypeScript": {
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      },
-      "TSX": {
-        "code_actions_on_format": {
-          "source.organizeImports": true
-        }
-      },
-      "JavaScript": {
-        "code_actions_on_format": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "language_servers": [
+        "tailwindcss-language-server",
+        "astro-language-server"
+      ]
     }
   },
   "lsp": {
     "tailwindcss-language-server": {
-      "includeLanguages": {
-        "astro": "html"
-      },
-      "classAttributes": ["class", "className", "class:list"],
-      "experimental": {
-        "classRegex": ["[class|className]\\s\\:\\=\\s\"([^\"]*)"]
-      }
+      "colorDecorators": false,
+      "classAttributes": ["class", "className", "class:list", "tw", "twx"]
     }
+  },
+  "project_panel": {
+    "dock": "right",
+    "file_icons": true
   },
   "telemetry": {
     "diagnostics": false,
